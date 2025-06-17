@@ -15,7 +15,7 @@ var MovieCollection *mongo.Collection
 var UserCollection *mongo.Collection
 
 func ConnectDB() {
-	clientOptions := options.Client().ApplyURI("mongodb+srv://riddhikakundu:<db password>@cluster0.0vn1uh4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+	clientOptions := options.Client().ApplyURI("mongodb+srv://riddhikakundu:CaLSoft_2025@cluster0.0vn1uh4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
