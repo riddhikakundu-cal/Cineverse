@@ -2,8 +2,8 @@ package handlers
 
 import (
 	"context"
-	"latest/backend/database"
-	"latest/backend/models"
+	"latest/database"
+	"latest/models"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

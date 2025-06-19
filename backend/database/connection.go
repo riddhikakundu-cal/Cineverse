@@ -3,6 +3,7 @@ package database
 import (
 	"context"
 	"log"
+	"os"
 	"time"
 
 	"go.mongodb.org/mongo-driver/mongo"
@@ -15,7 +16,7 @@ var MovieCollection *mongo.Collection
 var UserCollection *mongo.Collection
 
 func ConnectDB() {
-	clientOptions := options.Client().ApplyURI("mongodb+srv://riddhikakundu:CaLSoft_2025@cluster0.0vn1uh4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+	clientOptions := options.Client().ApplyURI(os.Getenv("MONGO_URI"))
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()

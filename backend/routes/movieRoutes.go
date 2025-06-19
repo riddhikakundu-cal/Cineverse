@@ -2,8 +2,8 @@
 package routes
 
 import (
-	"latest/backend/handlers"
-	"latest/backend/middlewares"
+	"latest/handlers"
+	"latest/middlewares"
 
 	"github.com/gin-gonic/gin"
 )

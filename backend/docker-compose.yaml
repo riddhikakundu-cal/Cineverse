@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  cineverse-backend:
+    build: .
+    container_name: cineverse-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    restart: always
+
+  cineverse-frontend:
+    image: nginx:alpine
+    container_name: cineverse-frontend
+    ports:
+      - "5500:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    restart: always

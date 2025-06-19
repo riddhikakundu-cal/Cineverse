@@ -3,8 +3,8 @@ package handlers
 import (
 	"context"
 	"fmt"
-	"latest/backend/database"
-	"latest/backend/models"
+	"latest/database"
+	"latest/models"
 	"net/http"
 	"time"
 

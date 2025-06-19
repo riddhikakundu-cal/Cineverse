@@ -3,8 +3,8 @@ package main
 
 import (
 	"fmt"
-	"latest/backend/database"
-	"latest/backend/routes"
+	"latest/database"
+	"latest/routes"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
