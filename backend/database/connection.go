@@ -2,10 +2,12 @@ package database
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 	"time"
 
+	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -16,6 +18,11 @@ var MovieCollection *mongo.Collection
 var UserCollection *mongo.Collection
 
 func ConnectDB() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+	fmt.Println("MONGO_URI:", os.Getenv("MONGO_URI"))
 	clientOptions := options.Client().ApplyURI(os.Getenv("MONGO_URI"))
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)

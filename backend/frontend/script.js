@@ -106,7 +106,7 @@ async function deleteMovie(id) {
 document.getElementById('movie-form').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  if (userRole !== 'admin') {
+  if (userRole !== '') {
     alert('Only admins can add movies.');
     return;
   }
